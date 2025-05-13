@@ -2,13 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Experience - Dr. Kishore</title>
+    <title>Education - Dr. Kishore</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: none;
+                flex-direction: column;
+                background-color: #003366;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo">Dr. Kishore Babu</a>
-        <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="education.html">Education</a>
@@ -17,28 +51,28 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <section class="euduction" id="education">
+
+    <section class="education" id="education">
         <h2>Education</h2>
-        <p>•	Ph.D completed in Acharya Nagarjuna University in Computer Science & Engineering in June, 2023.</p>
-        <p>•	M.Tech (Software Engineering) completed in Avanthi Institute of Engineering and Technology, Vishakapatnam, JNTU in 2009 .</p>
-        <p>•	B.Tech (CSE) completed in Gudlavalleru Engg. College, Gudlavalleru, JNTU in 2004.</p>
+        <p>• Ph.D completed in Acharya Nagarjuna University in Computer Science & Engineering in June, 2023.</p>
+        <p>• M.Tech (Software Engineering) completed in Avanthi Institute of Engineering and Technology, Vishakapatnam, JNTU in 2009.</p>
+        <p>• B.Tech (CSE) completed in Gudlavalleru Engg. College, Gudlavalleru, JNTU in 2004.</p>
 
         <h2>Extra Qualification</h2>
-
-        <p>   •	NPTEL domain Certificate in Data Science, 2024</p>
-        <p>   •	UGC-NET qualified in December, 2018</p>
-        <p>  •	APSET qualified in 2013.</p>
-        <p>  •	Ratified by JNTUH as Assistant Professor in 2012.</p>
-        <p>  •	JNTUH FET qualified in 2012, 2011 and 2010.</p>
-        <p>  •	GATE qualified in 2013 and 2005.</p>
-        <p>  •	Quiz paper setter of JNTUH of various subjects.</p>
-        
-
-
-
+        <p>• NPTEL domain Certificate in Data Science, 2024</p>
+        <p>• UGC-NET qualified in December, 2018</p>
+        <p>• APSET qualified in 2013.</p>
+        <p>• Ratified by JNTUH as Assistant Professor in 2012.</p>
+        <p>• JNTUH FET qualified in 2012, 2011 and 2010.</p>
+        <p>• GATE qualified in 2013 and 2005.</p>
+        <p>• Quiz paper setter of JNTUH of various subjects.</p>
     </section>
 
-
-
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

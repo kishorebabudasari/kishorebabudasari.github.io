@@ -200,3 +200,50 @@ section ul {
         font-size: 16px;
     }
 }
+
+
+/* Hamburger style */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding-right: 20px;
+  }
+  
+  /* Responsive Navbar */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #003366;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      padding: 10px;
+      display: block;
+      color: white;
+      border-top: 1px solid #ccc;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+

@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <title>Experience - Dr. Kishore</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: none;
+                flex-direction: column;
+                background-color: #003366;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo">Dr. Kishore Babu</a>
-        <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="education.html">Education</a>
@@ -20,11 +54,17 @@
 
     <section class="experience" id="experience">
         <h2>Experience</h2>
-        <p>•	Working as an Assistant Professor in Keshav Memorial Institute of Technology, Hyderabad from November, 2017 to till date.</p>
-        •	Worked as an Assistant Professor in MallaReddy Engineering College, Hyderabad from July, 2010 to November 2016.</p>
-        •	Worked as an Assistant Professor in Turbomachinery Institute of Science and Technology, Hyderabad from October, 2009 to May, 2010.</p>
-        •	Worked as an Assistant Professor in Sri K S Raju Institute of Technology and Sciences, Hyderabad from September, 2007 to September, 2009.</p>
-            </p>
+        <p>• Working as an Assistant Professor in Keshav Memorial Institute of Technology, Hyderabad from November, 2017 to till date.</p>
+        <p>• Worked as an Assistant Professor in Malla Reddy Engineering College, Hyderabad from July, 2010 to November, 2016.</p>
+        <p>• Worked as an Assistant Professor in Turbomachinery Institute of Science and Technology, Hyderabad from October, 2009 to May, 2010.</p>
+        <p>• Worked as an Assistant Professor in Sri K S Raju Institute of Technology and Sciences, Hyderabad from September, 2007 to September, 2009.</p>
     </section>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

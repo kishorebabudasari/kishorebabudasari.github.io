@@ -2,13 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Experience - Dr. Kishore</title>
+    <title>Publications - Dr. Kishore</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: none;
+                flex-direction: column;
+                background-color: #003366;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                color: white;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo">Dr. Kishore Babu</a>
-        <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="education.html">Education</a>
@@ -17,29 +51,35 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
+
     <section class="publications" id="publications">
         <h2>Research Details</h2>
-        <p>Ph.D Thesis Title is “PROACTIVE DDOS ATTACKS DETECTION WITH MACHINE LEARNING CLASSIFICATION ALGORITHMS USING DIFFERENT UNCORRELATED FEATURES SUBSETS”.
-            https://shodhganga.inflibnet.ac.in/handle/10603/512861 </p>
+        <p>Ph.D Thesis Title: “PROACTIVE DDOS ATTACKS DETECTION WITH MACHINE LEARNING CLASSIFICATION ALGORITHMS USING DIFFERENT UNCORRELATED FEATURES SUBSETS”  
+            <br>Link: <a href="https://shodhganga.inflibnet.ac.in/handle/10603/512861" target="_blank">Shodhganga</a>
+        </p>
 
-            <h2>TOTAL RESEARCH PUBLICATIONS :(TOTAL=16) </h2>
-               <p>Scopus Indexed Journal Papers: 6</p>
-                <p>Scopus-Indexed Conference Papers (IEEE & SPRINGER):</p>
-                <p>Scopus-Indexed Book Chapters: 2</p>
+        <h2>TOTAL RESEARCH PUBLICATIONS: (TOTAL = 16)</h2>
+        <p>• Scopus Indexed Journal Papers: 6</p>
+        <p>• Scopus-Indexed Conference Papers (IEEE & SPRINGER)</p>
+        <p>• Scopus-Indexed Book Chapters: 2</p>
 
-        <h2>SCOPUS JOURNAL PUBLICATIONS(5)</h2>
-         <p>1.Dr. Kishorebabu Dasari., Dr. Srinivas Mekala, Dr. Jhansi Rani K. (2024). Evaluation of UDP-based DDoS attack detection by neural network classifier with convex optimization and activation functions. Ingénierie des Systèmes d’Information, Vol. 29, No. 3, pp. 1031-1042. https://doi.org/10.18280/isi.290321.</p>
-         <p>2.Kishorebabu Dasari, Nagaraju Devarakonda, "Detection of DDoS Attacks Using Machine Learning Classification Algorithms", International Journal of Computer Network and Information Security(IJCNIS), Vol.14, No.6, pp.89-97, 2022. DOI:10.5815/ijcnis.2022.06.07 </p>
-         <p>3.Kishorebabu Dasari, Dr D Nagaraju, (2022). Detection of TCP-based DDoS attacks with SVM classification with different kernel functions using common uncorrelated feature subsets. International Journal of Safety and Security Engineering, Vol. 12, No. 2, pp. 239-249. https://doi.org/10.18280/ijsse.120213</p>
-          <p>4.Kishorebabu Dasari, Dr D Nagaraju, (2022). TCP/UDP-based exploitation DDoS attacks detection using AI classification algorithms with common uncorrelated feature subset selected by Pearson, Spearman and Kendall correlation methods. Revue d'Intelligence Artificielle, Vol. 36, No. 1, pp. 61-71. https://doi.org/10.18280/ria.360107</p>
-          <p>5.Kishorebabu Dasari, Dr D Nagaraju, (2021). Detection of different DDoS attacks using machine learning classification algorithms. Ingénierie des Systèmes d’Information, Vol. 26, No. 5, pp. 461-468. https://https://doi.org/10.18280/isi.260505</p>
-           
-                
+        <h2>SCOPUS JOURNAL PUBLICATIONS (5)</h2>
+        <p>1. Dr. Kishorebabu Dasari, Dr. Srinivas Mekala, Dr. Jhansi Rani K. (2024). Evaluation of UDP-based DDoS attack detection by neural network classifier with convex optimization and activation functions. *Ingénierie des Systèmes d’Information*, Vol. 29, No. 3, pp. 1031-1042. [DOI](https://doi.org/10.18280/isi.290321)</p>
 
+        <p>2. Kishorebabu Dasari, Nagaraju Devarakonda. Detection of DDoS Attacks Using Machine Learning Classification Algorithms. *International Journal of Computer Network and Information Security (IJCNIS)*, Vol. 14, No. 6, pp. 89-97, 2022. [DOI](https://doi.org/10.5815/ijcnis.2022.06.07)</p>
+
+        <p>3. Kishorebabu Dasari, Dr. D Nagaraju. Detection of TCP-based DDoS attacks with SVM classification with different kernel functions using common uncorrelated feature subsets. *International Journal of Safety and Security Engineering*, Vol. 12, No. 2, pp. 239-249. [DOI](https://doi.org/10.18280/ijsse.120213)</p>
+
+        <p>4. Kishorebabu Dasari, Dr. D Nagaraju. TCP/UDP-based exploitation DDoS attacks detection using AI classification algorithms with common uncorrelated feature subset selected by Pearson, Spearman and Kendall correlation methods. *Revue d'Intelligence Artificielle*, Vol. 36, No. 1, pp. 61-71. [DOI](https://doi.org/10.18280/ria.360107)</p>
+
+        <p>5. Kishorebabu Dasari, Dr. D Nagaraju. Detection of different DDoS attacks using machine learning classification algorithms. *Ingénierie des Systèmes d’Information*, Vol. 26, No. 5, pp. 461-468. [DOI](https://doi.org/10.18280/isi.260505)</p>
     </section>
 
-    
-
-
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Kishore Babu Dasari - Portfolio</title>
-    <meta name="google-site-verification" content="googledbdb3997b7076d28" />
+    <meta name="google-site-verification" content="your-verification-code-here" />
 
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Dr. Kishore Babu Dasari</a>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="publications.html">Publications</a>
-            <a href="contact.html">Contact</a>
+        <a href="#" class="logo">Dr. Kishore Babu Dasari</a>
+        <nav class="navbar" id="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="education.html">Education</a>
+          <a href="experience.html">Experience</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>
         </nav>
-    </header>
+        <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+      </header>
 
     <div class="google-links">
         <a href="https://www.kmit.in/" target="_blank">KMIT</a>
@@ -42,6 +45,16 @@
             <p>Specialized in Computer Science & Engineering with over 20 years of teaching and research experience.</p>
         </div>
     </section>
+
+
+
+    <script>
+        function toggleMenu() {
+          const nav = document.getElementById('navbar');
+          nav.classList.toggle('active');
+        }
+      </script>
+      
     
 
 
